@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar ">
+            <div class="nav-logo ">
+                <div class="nav "><a href="index.html">
+                    <img id='amazonlogo'
+                        src="https://onlinebusinessmanager.com/wp-content/uploads/2018/09/white-amazon-logo-png-6.png"
+                        alt="" /></a>
+                    <div class="hover">
+                        <img id="location"
+                            src="https://www.pngkey.com/png/full/235-2350342_location-white-location-icon-with-transparent-background.png">
+                        Deliver to <br> India
+                    </div>
+                    <select class="search">
+                        <option>All</option>
+                        <option value="Arts ">Arts </option>
+                        <option value="Boys">Boys</option>
+                        <option value="Combs">Combs</option>
+                        <option value="Deals">Deals</option>
+                        <option value="Electric">Electrics</option>
+                        <option value="Fan">Fan</option>
+                        <option value="Girls">Girls</option>
+                        <option value="Mens">Mens</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Womens">Women</option>
+                    </select>
+
+
+
+
+                    <input type="text" id="searchInput" placeholder="Search Amazon" class="example">
+                    <button onclick="search()" class="ex">Search</button>
+                
+                    <script>
+                        function search() {
+                            // Get the search query
+                            var query = document.getElementById("searchInput").value.toLowerCase();
+                
+                            // Define the redirect URLs for each item or keyword
+                            var redirects = {
+                                "products": "products.html",
+                                "item2": "item2.html",
+                                // Add more items and corresponding URLs as needed
+                            };
+                
+                            // Check if the query matches any item
+                            if (redirects.hasOwnProperty(query)) {
+                                // Redirect to the corresponding URL
+                                window.location.href = redirects[query];
+                            } else {
+                                // Handle no match found
+                                alert("No matching item found");
+                            }
+                        }
+                    </script>
+                    <div class="hover">
+                        <img class="lan"
+                            src="https://th.bing.com/th?id=OIP.BrifGxg8WR7oMUeKYRMrugHaD5&w=150&h=104&c=7&o=6&dpr=1.3&pid=13.1">
+                        <select class="lang" style="margin-right: 10px;">
+                            <option>EN</option>
+                        </select>
+                    </div>
+                    <div class="hover">
+                        Hello, sign in<br>Accounts & Lists
+                        <select class="hello">
+                            <option>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="hover">
+
+                        Returns<br>&Orders
+                    </div>
+                    <div class="hover">
+                        <svg class="carts" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="secondbar">
+
+
+            <button class="button" type="button">All</button>
+
+            <button class="button1" type="button">Today's Deals</button>
+            <button class="button2" type="button">Customer Service</button>
+            <button class="button3" type="button">Registry</button>
+            <button class="button4" type="button">Gift Cards</button>
+            <button class="button5" type="button">Sell</button>
+
+
+        </div>
+
+    </header>
+
+    <div class="backimg">
+        <img src="game/back.png">
+    </div>
+    <div class="feature"
+        style="text-align: center; font-size: xx-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <p>Featured Catergories</p>
+    </div>
+    <div class="Nin">
+        <div class="nint">
+            <img src="game/nin.png" width="320px">
+
+        </div>
+        <div class="nin">Nintendo</div>
+    </div>
+    <div class="Nin">
+        <div class="oc">
+            <img src="game/oculus.jpg" width="320px">
+
+        </div>
+        <div class="nin">Oculus</div>
+    </div>
+    <div class="Nin">
+        <div class="nint">
+            <img src="game/xbox.png" width="320px" height="300px">
+
+        </div>
+        <div class="nin">xbox</div>
+        <div class="Nin">
+            <div class="nint">
+                <img src="images/Karu_LP_Laptop.png" width="320px" height="300px">
+
+            </div>
+            <div class="nin">Laptops</div>
+        </div>
+
+        <div class="sec2">
+            <div class="Nin">
+
+                <div class="nint">
+                    <img src="images/Karu_LP_Playstation3.jpg" width="320px">
+
+                </div>
+                <div class="nin">Playstation</div>
+            </div>
+
+            <div class="Nin">
+                <div class="oc">
+                    <img src="images/Karu_LP_Controller2.png" width="320px">
+
+                </div>
+                <div class="nin">Controllers</div>
+            </div>
+            <div class="Nin">
+                <div class="nint"><a href="products.html">
+                    <img src="images/Karu_Quad_Headset.jpg" width="320px" height="300px">
+
+                </div></a>
+                <div class="nin">Headsets</div>
+                <div class="Nin">
+                    <div class="nint">
+                        <img src="images/Karu_Quad_Keyboard.jpg" width="320px" height="300px">
+
+                    </div>
+                    <div class="nin">Keyboards</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sec3">
+            <div class="Nin">
+
+                <div class="nint">
+                    <img src="images/Karu_Quad_Apparel.jpg" width="320px">
+
+                </div>
+                <div class="nin">Apparel</div>
+            </div>
+
+            <div class="Nin">
+                <div class="oc">
+                    <img src="images/Karu_Quad_Chair.jpg" width="320px">
+
+                </div>
+                <div class="nin">Chair</div>
+            </div>
+            <div class="Nin">
+                <div class="nint">
+                    <img src="images/Karu_Quad_Mouse.jpg" width="320px" height="300px">
+
+                </div>
+                <div class="nin">Mouse</div>
+                <div class="Nin">
+                    <div class="nint">
+                        <img src="images/Karu_Quad_Figure.jpg" width="320px" height="300px">
+
+                    </div>
+                    <div class="nin" style="margin-top: -40px;">Action Figure</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sec4">
+            <div class="Nin">
+
+                <div class="nint">
+                    <img src="images/Karu_Quad_Hat.jpg" width="320px">
+
+                </div>
+                <div class="nin">Hats</div>
+            </div>
+
+            <div class="Nin">
+                <div class="oc">
+                    <img src="images/Karu_Quad_Mug.jpg" width="320px">
+
+                </div>
+                <div class="nin">Mugs</div>
+            </div>
+            <div class="Nin">
+                <div class="nint">
+                    <img src="images/OIP.jpg" width="320px" height="250px">
+
+                </div>
+                <div class="nin" style="margin-top: 40px;">Bottles</div>
+                <div class="Nin">
+                    <div class="nint" style="margin-top: 30px ; margin-left: 40px;">
+                        <img src="images/th.jpg" width="200px" height="200px" >
+
+                    </div>
+                    <div class="nin" style="margin-top: 10px;">Mics</div>
+
+                </div>
+            </div>
+        </div>
+        <section class="footer" style="margin-top: 10px;">
+            <div class="backtop">
+                <span>Back to Top</span>
+            </div>
+            <div class="detail">
+                <div class="table">
+                    <div>
+                        <div class="t-head">Get to Know Us</div>
+                        <ul>
+                            <li>Careers</li>
+                            <li>Blogs</li>
+                            <li>About Amazon</li>
+                            <li>Investor Relations</li>
+                            <li>Amazon Advices</li>
+                            <li>Amazon Science</li>
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <div class="t-head">Make Money with Us</div>
+                        <ul>
+                            <li>Sell Products on Amazon</li>
+                            <li>Sell on Amazon Business</li>
+                            <li>Sell Apps on Amazon</li>
+                            <li>Become an Affiliate</li>
+                            <li>Advertise your Products</li>
+                            <li>Host an Amazon Hub</li>
+                        </ul>
+                    </div>
+    
+    
+                    <div>
+                        <div class="t-head">Amazon Payment Products</div>
+                        <ul>
+                            <li>Amazon Business Cards</li>
+                            <li>Shop with Points</li>
+                            <li>Reload your Balance</li>
+                            <li>Amazon Currency Converter</li>
+                        </ul>
+                    </div>
+    
+    
+                    <div>
+                        <div class="t-head">Let Us Help You</div>
+                        <ul>
+                            <li>Amazon and COVID-19</li>
+                            <li>Your Account</li>
+                            <li>Your Orders</li>
+                            <li>Shipping Rates and Policies</li>
+                            <li>Returns and Replacements</li>
+                            <li>Manage your Content & Devices</li>
+                            <li>Amazon Assistant</li>
+                            <li>Help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="copy">
+                <span>&copy; Designed by Rajendra </span>
+            </div>
+        </section>
+        <script src="raj.js"></script>
+</body>
+
+</html>

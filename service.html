@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Customer Service</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #007185;
+    }
+
+    .con1 {
+      height: 60px;
+      width: auto;
+      border-bottom: 1px solid #388998;
+      color: white;
+      font-family: Arial, sans-serif;
+      background-color: #007185;
+    }
+
+    .b1 {
+      background-color: #007185;
+      border: none;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 10px;
+      color: #ffffff;
+      font-size: large;
+    }
+
+    .b1:hover {
+      text-decoration: underline;
+    }
+
+    .vertical-line {
+      width: 1px;
+      height: 30px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      margin-top: -28px;
+      margin-left: 180px;
+    }
+
+    .b2 {
+      background-color: #007185;
+      border: none;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 30px;
+      color: #ffffff;
+      font-size: large;
+    }
+
+    .b2:hover {
+      text-decoration: underline;
+    }
+    .b3{
+      background-color: #007185;
+      border: none;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 10px;
+      color: #ffffff;
+      font-size: large;
+    }
+
+    .b3:hover {
+      text-decoration: underline;
+    }
+
+
+    .conh {
+      padding: 10px 15px;
+      word-spacing: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #007185;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px 15px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-options {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create three equal columns */
+    gap: 20px; /* Space between grid items */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    }
+
+    .service-option {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #000000;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: #ffffff;
+      gap: 10px;
+      display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .service-option:hover {
+      background-color: white;
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    .service-title {
+      font-size: 20px;
+    }
+
+    .service-description {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .service-content {
+      display: none;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .service-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-content p {
+      line-height: 1.6;
+      color: #ffffff;
+    }
+  </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar ">
+        <div class="nav-logo ">
+            <div class="nav "><a href="index.html">
+                    <img id='amazonlogo'
+                        src="https://onlinebusinessmanager.com/wp-content/uploads/2018/09/white-amazon-logo-png-6.png"
+                        alt="" /></a>
+                <div class="hover">
+                    <img id="location"
+                        src="https://www.pngkey.com/png/full/235-2350342_location-white-location-icon-with-transparent-background.png">
+                    Deliver to <br> India
+                </div>
+                <select class="search">
+                    <option>All</option>
+                    
+                    <option value="Arts ">Arts </option>
+                    <option value="Boys">Boys</option>
+                    <option value="Combs">Combs</option>
+                    <option value="Deals">Deals</option>
+                    <option value="Electric">Electronics</option>
+                    <option value="Fan">Fan</option>
+                    <option value="Girls">Girls</option>
+                    <option value="Mens">Mens</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Womens">Womens</option>
+                </select>
+
+        
+
+
+
+                <input type="text" id="searchInput" placeholder="Search Amazon" class="example">
+                <button onclick="search()" class="ex">Search</button>
+            
+                <script>
+                    function search() {
+                        // Get the search query
+                        var query = document.getElementById("searchInput").value.toLowerCase();
+            
+                        // Define the redirect URLs for each item or keyword
+                        var redirects = {
+                          "smartphones": "smartphones.html",
+                                "headphones": "headphones.html",
+                            // Add more items and corresponding URLs as needed
+                        };
+            
+                        // Check if the query matches any item
+                        if (redirects.hasOwnProperty(query)) {
+                            // Redirect to the corresponding URL
+                            window.location.href = redirects[query];
+                        } else {
+                            // Handle no match found
+                            alert("No matching item found");
+                        }
+                    }
+                </script>
+
+                <div class="hover">
+                    <img class="lan"
+                        src="https://th.bing.com/th?id=OIP.BrifGxg8WR7oMUeKYRMrugHaD5&w=150&h=104&c=7&o=6&dpr=1.3&pid=13.1">
+                    <select class="lang" style="margin-right: 10px;">
+                        <option>EN</option>
+                    </select>
+                </div>
+                <div class="hover">
+                    Hello, sign in<br>Accounts & Lists
+                    <select class="hello">
+                        <option>
+                        </option>
+                    </select>
+                </div>
+                <div class="hover">
+
+                    Returns<br>&Orders
+                </div>
+
+                <div class="hover"><a href="cart.html">
+                        <svg class="carts" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
+                            </path>
+                        </svg></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="secondbar">
+
+        <div class="alllink">
+
+            <button class="button" id="allButton" type="button"> All</button>
+
+
+            <button class="button1" type="button">Today's Deals</button>
+            <button class="button2" type="button">Customer Service</button>
+            <button class="button3" type="button">Registry</button>
+            <button class="button4" type="button">Gift Cards</button>
+            <button class="button5" type="button">Sell</button>
+
+
+        </div>
+    </div>
+
+  <div class="con1"><button class="b1">Customer Service</button><a href="in.html"> <button class="b2">Home</button></a> <button
+      class="b3">Digital Services and Device Support</button>
+    <div class="vertical-line"></div>
+  </div> <p style="margin-top: 40px; margin-left: 150px; font-family: Arial, sans-serif; color: #ffffff; font-size: x-large;" >Welcome to Amazon Customer Service</p>
+  <p style="margin-top: 10px; margin-left: 150px; font-family: Arial, sans-serif; color: #ffffff; font-size: larger;" >What would you like help with today? You can quickly take care of most things here, or connect with us when needed.
+  </p>
+
+    <ul class="service-options">
+      <li class="service-option" onclick="showOption('orders')">
+        <img src="https://img.icons8.com/color/48/000000/shopping-cart.png" class="service-icon" alt="Orders">
+        <div>
+          <h3 class="service-title">Orders</h3>
+          <p class="service-description">Track orders, cancel items, return orders, and manage your account.</p>
+        </div>
+      </li>
+      <li class="service-option" onclick="showOption('returns')">
+        <img src="https://img.icons8.com/color/48/000000/refund.png" class="service-icon" alt="Returns & Refunds">
+        <div>
+          <h3 class="service-title">Returns & Refunds</h3>
+          <p class="service-description">Return or replace items, print return labels, and check the status of your
+            returns.</p>
+        </div>
+      </li>
+      <li class="service-option" onclick="showOption('payments')">
+        <img src="images/a05.png" class="service-icon" alt="Payments & Pricing">
+        <div>
+          <h3 class="service-title">Payments & Pricing</h3>
+          <p class="service-description">Update payment methods, manage shipping and billing addresses, and learn about
+            pricing and promotions.</p>
+        </div>
+      </li>
+      <li class="service-option" onclick="showOption('account')">
+        <img src="images/a04.png" class="service-icon" alt="Account Settings">
+        <div>
+          <h3 class="service-title">Account Settings</h3>
+          <p class="service-description">Change email or password, update login information, and manage Prime
+            membership.</p>
+        </div>
+      </li>
+      <li class="service-option" onclick="showOption('shipping')">
+        <img src="images/a03.png" class="service-icon" alt="Shipping & Delivery">
+        <div>
+          <h3 class="service-title">Devices</h3>
+          <p class="service-description">Kindle, Fire, Alexa or other Amazon devices
+          </p>
+        </div>
+      </li>
+      <li class="service-option" onclick="showOption('products')">
+        <img src="https://img.icons8.com/color/48/000000/online-store.png" class="service-icon"
+          alt="Products & Inventory">
+        <div>
+          <h3 class="service-title">Products & Inventory</h3>
+          <p class="service-description">Manage inventory, add new products, and update product details.</p>
+        </div>
+      </li> <li class="service-option" onclick="showOption('shipping')">
+        <img src="images/a101.png" class="service-icon" alt="Shipping & Delivery">
+        <div>
+          <h3 class="service-title">Shipping & Delivery</h3>
+          <p class="service-description">Change or cancel orders, find shipping rates, and learn about delivery options.
+          </p>
+        </div>
+      </li>
+      <li class="service-option" >
+        <img src="images/a02.png" class="service-icon" alt="Shipping & Delivery">
+        <div>
+          <h3 class="service-title">Special</h3>
+          <p class="service-description">Payment, charges or gift cards
+          </p>
+        </div>
+      </li>
+    </ul>
+   
+    <div id="orders" class="service-content">
+      <h2>Orders</h2>
+      <p>Need help with an order? Whether you need to track your package, cancel an item, or return something, we're
+        here to assist you every step of the way.</p>
+    </div>
+    <div id="returns" class="service-content">
+      <h2>Returns & Refunds</h2>
+      <p>Unhappy with your purchase? No problem! Learn how to return or exchange items, print return labels, and check
+        the status of your refunds.</p>
+    </div>
+    <div id="payments" class="service-content">
+      <h2>Payments & Pricing</h2>
+      <p>Update your payment methods, manage your shipping and billing addresses, and stay informed about pricing,
+        discounts, and promotions.</p>
+    </div>
+    <div id="account" class="service-content">
+      <h2>Account Settings</h2>
+      <p>Keep your account up-to-date by changing your email or password, updating your login information, and managing
+        your Prime membership.</p>
+    </div>
+    <div id="shipping" class="service-content">
+      <h2>Shipping & Delivery</h2>
+      <p>Find answers to your shipping questions, including how to change or cancel orders, check shipping rates, and
+        explore delivery options.</p>
+    </div>
+    <div id="products" class="service-content">
+      <h2>Products & Inventory</h2>
+      <p>Manage your inventory, add new products to your store, and update product details to keep your listings
+        accurate and up-to-date.</p>
+    </div>
+  </div>
+
+  <script>
+    function showOption(optionId) {
+      // Hide all service content sections
+      var serviceContents = document.querySelectorAll('.service-content');
+      serviceContents.forEach(function (content) {
+        content.style.display = 'none';
+      });
+      // Show the selected service content section
+      document.getElementById(optionId).style.display = 'block';
+    }
+  </script>
+   <section class="footer">
+    <div class="backtop">
+        <span>Back to Top</span>
+    </div>
+    <div class="detail">
+        <div class="table">
+            <div>
+                <div class="t-head">Get to Know Us</div>
+                <ul>
+                    <li>Careers</li>
+                    <li>Blogs</li>
+                    <li>About Amazon</li>
+                    <li>Investor Relations</li>
+                    <li>Amazon Advices</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="t-head">Make Money with Us</div>
+                <ul>
+                    <li>Sell Products on Amazon</li>
+                    <li>Sell on Amazon Business</li>
+                    <li>Sell Apps on Amazon</li>
+                    <li>Become an Affiliate</li>
+                    <li>Advertise your Products</li>
+                    <li>Host an Amazon Hub</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <div class="t-head">Amazon Payment Products</div>
+                <ul>
+                    <li>Amazon Business Cards</li>
+                    <li>Shop with Points</li>
+                    <li>Reload your Balance</li>
+                    <li>Amazon Currency Converter</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <div class="t-head">Let Us Help You</div>
+                <ul>
+                    <li>Amazon and COVID-19</li>
+                    <li>Your Account</li>
+                    <li>Your Orders</li>
+                    <li>Shipping Rates and Policies</li>
+                    <li>Returns and Replacements</li>
+                    <li>Manage your Content & Devices</li>
+                    <li>Amazon Assistant</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="copy">
+        <span>&copy; Designed by Rajendra </span>
+    </div>
+    <div class="footer-bottom">
+        <ul class="footer-languages">
+            <li><a href="#">English</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">Français</a></li>
+            <li><a href="#">中文</a></li>
+            <li><a href="#">Português</a></li>
+        </ul>
+        <ul class="footer-countries">
+            <li><a href="#">United States</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">India</a></li>
+        </ul>
+    </div>
+    <div class="footer-legal">
+        <ul>
+            <li><a href="#">Conditions of Use</a></li>
+            <li><a href="#">Privacy Notice</a></li>
+            <li><a href="#">Interest-Based Ads</a></li>
+            <li>&copy; 2024, Amazon Clone, Inc. or its affiliates</li>
+        </ul>
+</section>
+<script src="raj.js"></script>
+</body></html>
